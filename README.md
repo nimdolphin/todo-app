@@ -40,3 +40,5 @@
    npm start
 
 После выполнения этих шагов, приложение будет доступно по адресу http://localhost:3000/.
+
+[Приложение доступно для просмотра на GitHub Pages](https://nimdolphin.github.io/todo-app/)
