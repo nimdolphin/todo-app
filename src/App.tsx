@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import TaskInputForm from "./components/TaskInputForm";
+import TodoLists from "./components/TodoLists";
+import { Layout, Flex } from "antd";
+
+const layoutStyle = {
+  borderRadius: 8,
+  overflow: "hidden",
+  width: "calc(50% - 8px)",
+  maxWidth: "calc(50% - 8px)",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex
+      gap="middle"
+      wrap="wrap"
+      justify="center"
+      style={{ margin: "15px", textAlign: "center" }}
+    >
+      <Layout style={layoutStyle}>
+        <Header />
+        <TaskInputForm />
+        <TodoLists />
+      </Layout>
+    </Flex>
   );
 }
 
